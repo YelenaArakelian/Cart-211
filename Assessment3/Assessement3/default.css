@@ -1,8 +1,15 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    
+.monda-<uniquifier> {
+  font-family: "Monda", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+/*
     padding: 0;
     margin: 0;
-
+            */
 }
 
 #wrapper{
@@ -124,6 +131,7 @@ table img{
     max-height: 100%
 }
 
+/*This is for Cell Phones*/
 @media (max-width: 480px)
 
 {
@@ -153,5 +161,26 @@ nav a{
 h1 {
     margin-top: 50px;
 }
+
+#wrapper {
+
+    margin-top: 50px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    float: none;
+}
+
+footer{
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+.books{
+    grid-template-columns: auto auto;
+    gap: 16px;
+
+}
+
 
 }
