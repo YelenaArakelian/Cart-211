@@ -1,16 +1,14 @@
-body {
-    
-.monda-<uniquifier> {
+body {   
+.monda-<uniquifier> 
   font-family: "Monda", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: <100>;
   font-style: normal;
-}
-/*
     padding: 0;
     margin: 0;
             */
-}
+
+}            
 
 #wrapper{
     margin-top: 0px;
