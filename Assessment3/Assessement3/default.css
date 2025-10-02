@@ -1,13 +1,12 @@
 body {   
 .monda-<uniquifier> 
-  font-family: "Monda", sans-serif;
+ font-family: "Monda", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <100>;
+  font-weight: 400;
   font-style: normal;
-    padding: 0;
-    margin: 0;
-            */
-
+  padding: 0;
+  margin: 0;
+  background-color: blanchedalmond;
 }            
 
 #wrapper{
@@ -18,14 +17,14 @@ body {
 }
 
 header h1{
-    text-align: right;
-    font-size: 25px;
+    text-align:center;
+    font-size: 45px;
     margin-bottom:5px;
 }
 
 header h2{
 margin-top: 0px;
-margin-bottom: 30px;
+margin-bottom: 60px;
     text-align: right;
     font-size: 20px;
     color: darkgray;
@@ -42,6 +41,7 @@ header h3{
 }
 
 header img{
+    width: 300px;
     margin-top: 50px;
     width: 100%;
 
