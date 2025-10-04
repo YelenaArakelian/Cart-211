@@ -1,3 +1,5 @@
+/* General Page Style */
+
 body {   
 .monda-<uniquifier> 
  font-family: "Monda", sans-serif;
@@ -9,6 +11,7 @@ body {
   background-color: blanchedalmond;
 }            
 
+/* Wrapper, main content */
 #wrapper{
     margin-top: 0px;
     float: right;
@@ -16,6 +19,7 @@ body {
     margin-right: 50px;
 }
 
+/* Header Styles */
 header h1{
     text-align:right;/*Ocean Vuong title*/
     font-size: 50px;
@@ -45,6 +49,7 @@ header img{
   display: block;
 }
 
+/* Navigation (left menu) */
 nav{
     margin-top: 50px;
     margin-left: 50px;
@@ -83,6 +88,7 @@ article h3 {
 
 }
 
+/* Footer */
 footer{
     margin-top: 20px;
     min-height: 30px;
@@ -97,6 +103,7 @@ footer a{
     color: rgb(173, 76, 76);
 }
 
+/* Books Grid Layout */
 .books{
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -129,7 +136,7 @@ table img{
     max-height: 100%
 }
 
-/*This is for Cell Phones*/
+/* For cell phones */
 @media (max-width: 480px)
 
 {
