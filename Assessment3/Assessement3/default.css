@@ -1,4 +1,4 @@
-/* General Page Style */
+                                /* General Page Style */
 
 body {   
 .monda-<uniquifier> 
@@ -19,14 +19,16 @@ body {
     margin-right: 50px;
 }
 
-/* Header Styles */
+                                /* Header Styles */
+/*Ocean Vuong title*/
 header h1{
-    text-align:right;/*Ocean Vuong title*/
+    text-align:right;
     font-size: 50px;
     margin-bottom:5px;
-    color: #af7b5e;
+    color: #8b3100;
 }
 
+/*Biography*/
 header h2{
 margin-top: 0px;
 margin-bottom: 60px;
@@ -34,6 +36,7 @@ margin-bottom: 60px;
      text-align: center; 
 }
 
+/*Childhood Education*/
 header h3{
     margin-top: 0px;
     margin-bottom: 10px;
@@ -49,7 +52,7 @@ header img{
   display: block;
 }
 
-/* Navigation (left menu) */
+                            /* Navigation (left menu) */
 nav{
     margin-top: 50px;
     margin-left: 50px;
@@ -112,9 +115,16 @@ footer a{
 }
 
 .books img{
-    display: block;
-    width: 100%;
-    height: auto;
+   display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.books figure:hover img {
+  transform: scale(1.05);
 }
 
 .books > div{
