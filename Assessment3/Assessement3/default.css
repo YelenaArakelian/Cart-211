@@ -15,7 +15,7 @@ body {
 #wrapper{
     margin-top: 0px;
     float: right;
-    width: 80%;
+    width: 75%;
     margin-right: 50px;
 }
 
@@ -60,6 +60,7 @@ nav{
     width: 15%;
     line-height: 30px;
     position: fixed;
+    font-size: 19px;
     
 
 }
