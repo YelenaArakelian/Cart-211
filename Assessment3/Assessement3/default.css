@@ -1,7 +1,6 @@
                                 /* General Page Style */
 
 body {   
-.monda-<uniquifier> 
  font-family: "Monda", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -16,7 +15,8 @@ body {
     margin-top: 0px;
     float: right;
     width: 75%;
-    margin-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
     color: #491b02;
 }
 
@@ -38,7 +38,6 @@ body {
   padding: 0 60px;
   color:#491b02;
 }
-
 
                                 /* Header Styles */
 /*Ocean Vuong title*/
@@ -73,7 +72,6 @@ header img{
   height: auto;
   display: block;
   margin: 0 auto;
-  margin-right: 50px;
 }
 
                             /* Navigation (left menu) */
@@ -191,4 +189,65 @@ article figure figcaption{
 table img{
     max-width: 100%;
     max-height: 100%
+}
+
+/* For cell phones */
+@media (max-width: 480px)
+{
+
+    #Home{
+        padding: 0% 20px;
+    }
+
+  /* Navigation bar styling for mobile */ 
+nav{
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    line-height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrapx;
+    border-bottom: 4px solid #471900;
+    background: #852704;
+    z-index: 1000;
+    color: white;
+}
+
+/* Navigation link styling */
+nav a{
+    color: #471900;
+}
+
+/* Heading adjustments for small screens */
+h1 {
+    margin-top: 50px;
+}
+
+/* Wrapper (main container) layout on mobile */
+#wrapper {  
+    position: relative;
+    width: 90%;
+    float: none;
+}
+
+
+/* Footer styling for small screens */
+footer{
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+ /* Books grid layout adjustment for mobile */
+.books{
+    grid-template-columns: auto auto;
+    gap: 16px;
+
+}
+
+
 }
