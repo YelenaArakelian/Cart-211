@@ -36,17 +36,30 @@
     <body>
         <div id="wrapper">
         <header>
+
+
         <!--Navigation-->
-        <nav>
-            <div class="logo"><a href="#"><img src="assets/logo.png" alt="logo" width="80" height="80">
-            </a>
-            </div>
-            <div class="menu1">
-            <a href="index.html">Index</a><br>
-            <a href="index.html">Stories</a><br>
-            <a href="#">About</a>
-            </div>
-        </nav>
+      <nav>
+  <div class="logo">
+    <a href="#"><img src="assets/logo.png" alt="logo" width="80" height="80"></a>
+  </div>
+
+  <!-- Links -->
+  <div class="menu1">
+    <a href="index.html">Index</a><br>
+    <a href="index.html">Stories</a><br>
+    <a href="#">About</a>
+  </div>
+
+  <!-- Hamburger button for mobile -->
+ <div class="hamburger-menu">
+    <button class="menu-toggle"> 
+      <span class="fa fa-bars"></span>
+    </button>
+  </div> 
+</nav>
+    
+
 
         </header>
 
@@ -65,64 +78,65 @@
 
             <div class="books">
                 <figure class="im1">
+                    <a href="#">
                     <img src="assets/america_pageant.jpg" class="im" alt="America Pageant" loading="lazy">
-    <figcaption>America Pageant</figcaption>
+    <div class="hover-text"></div> America Pageant</figcaption>
                 </figure>
 
                 <figure class="im2">
                     <img src="assets/Chipwich_guy.jpg" class="im" alt="Chipwich guy" loading="lazy">
-    <figcaption>Chipwich guy</figcaption>
+    <div class="hover-text"></div> Chipwich guy</figcaption>
                 </figure>
 
                 <figure class="im3">
                 <img src="assets/end_of_life_patient.jpg" class="im" alt="End of Life Patient" loading="lazy">
-    <figcaption>End of Life Patient</figcaption>
+    <div class="hover-text"></div> End of Life Patient</figcaption>
                 </figure>
 
                     <figure class="im4">
                 <img src="assets/exhausting_to_me.jpg" class="im" alt="Exhausting to me" loading="lazy">
-    <figcaption>Exhausting to me</figcaption>
+    <div class="hover-text"></div> Exhausting to me</figcaption>
                 </figure>
 
                 <figure class="im5">
                 <img src="assets/fake_sport.jpg" class="im" alt="Fake Sport" loading="lazy">
-    <figcaption>Fake Sport</figcaption>
+    <div class="hover-text"></div> Fake Sport</figcaption>
                 </figure>
 
                 <figure class="im6">
                 <img src="assets/gettin_married.jpg" class="im" alt="Gettin Married" loading="lazy">
-    <figcaption>Gettin Married</figcaption>
+    <div class="hover-text"></div> Gettin Married</figcaption>
                 </figure>
 
                 <figure class="im7">
                 <img src="assets/homework.jpg" class="im" alt="Homework" loading="lazy">
-    <figcaption>Homework</figcaption>
+    <div class="hover-text"></div> Homework</figcaption>
                 </figure>
 
                 <figure class="im8">
                 <img src="assets/invisibility.jpg" class="im" alt="Invisibility" loading="lazy">
-    <figcaption>Invisibility</figcaption>
+    <div class="hover-text"></div> Invisibility</figcaption>
                 </figure>
 
                 <figure class="im9">
                 <img src="assets/logo.png" class="im" alt="Logo" loading="lazy">
-    <figcaption>Logo</figcaption>
+    <div class="hover-text"></div> Logo</figcaption>
                 </figure>
 
 
                     <figure class="im10">
                 <img src="assets/Mardi-Gras.jpg" class="im" alt="Mardi Gras" loading="lazy">
-    <figcaption>Mardi Gras</figcaption>
+    <div class="hover-text"></div> Mardi Gras</figcaption>
                 </figure>
 
                     <figure class="im11">
                 <img src="assets/Right_and_wrong.jpg" class="im" alt="Right and Wrong" loading="lazy">
-    <figcaption>Right and Wrong</figcaption>
+    <div class="hover-text"></div> Right and Wrong</figcaption>
                 </figure>
 
                     <figure class="im12">
                 <img src="assets/sketchbook.jpg" class="im" alt="Sketchbook" loading="lazy">
-    <figcaption>Sketchbook</figcaption>
+    <div class="hover-text"></div> Sketchbook</figcaption>
                 </figure>
             </div>
 
@@ -150,7 +164,24 @@
 
 
     </footer>
-
+<!--Script for the hamburger menu-->
             </div>
+            <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
         </body>
         </html>

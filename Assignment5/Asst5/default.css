@@ -5,19 +5,18 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  font-variation-settings: "width" 100;
   padding: 0;
   margin: 0;
   background-color: blanchedalmond;
 }            
 
 /* Wrapper, main content */
-#wrapper{
-    margin-top: 0px;
-    float: right;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    color: #491b02;
+#wrapper {
+  width: 
+  margin: 0 auto; /* centers the entire content block */
+  color: #491b02;
+  float: none; /* removes the right float */
 }
 
 /* Bio */
@@ -75,13 +74,10 @@ header h3{
 } */
 
                             /* Navigation (left menu) */
-nav{
-    margin-top: 50px;
-    line-height: 30px;
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    
-
+nav {
+    /* ... other styles ... */
+    display: grid; 
+    grid-template-columns: 60% 1fr; /* <-- Two columns: one for 60% and one for the remaining space */
 }
 
 .menu1{
@@ -90,6 +86,97 @@ nav{
     justify-content: space-around; /*will make an amout of space*/
     align-items: center;
 
+}
+
+
+
+.menu1 a{
+    display: block;
+}
+
+.menu1 a,
+.menu1 a:hover{
+    text-decoration: none;
+    /*removes underline for normal and hovber states*/
+    color: gray;
+    /*link color unchanged*/
+    background-color: transparent;
+    /*no background color on hover*/
+    
+}
+    
+.close-menu {
+    display: block;
+    /*ensure the button is visible*/
+    position: absolute;
+    /*absolute positioning to place the button precisely*/
+    top: 20px;
+    /*space from the top*/
+    right: 20px;
+    /*space from the right*/
+    font-size: 2em;
+    /* icon size*/
+    color: gray;    
+    /*icon color*/
+}
+
+/*Display the menu fullscreen on mobile*/
+.menu-deployed{
+    display:flex;
+    /*flexbox layout*/
+    flex-direction: column;
+    /*stack items vertically*/  
+    justify-content: center;
+    /*center items vertically*/
+    align-items: center;
+    /*center items horizontally*/
+    width: 100%;
+    /*full width*/
+    height: 100vh;
+    /*full viewport height*/
+    position: fixed;
+    /*fixed position*/
+    top: 0;
+    /*top of viewport*/
+    left: 0;
+    /*left of viewport*/
+    background-color: white;
+    /*background color*/
+    z-index: 1000;
+    /*ensure it overlays other content*/
+    padding-top: 50px;
+    /*add some padding at the top*/
+}
+
+button {
+    border-width: 0px;
+    background-color: white;
+}
+
+
+.hamburger-menu {
+    display: flex;
+    /*hidden by default, will be shown on mobile*/
+    align-items: center;
+}
+
+.hamburger-menu botton {
+    background:none;
+    border:none;
+    font-size: 2em;
+    /* size of hambuger menu icon*/
+    color: gray;
+}
+
+.hamburger-menu botton.fa bars{
+    cursor: pointer;
+}
+
+.close-menu {
+    display:none;
+    /*hidden by defaukt, will be shown on mobile*/
+    align-items: center;
+    justify-content: center;
 }
 
 .logo{
@@ -111,6 +198,21 @@ nav a {
     font-weight: bold;
      letter-spacing: 2px;
 }
+
+nav a:hover {
+    color: #8b3100;
+}
+
+.menuI{
+    text-align: right;
+}
+
+.menuI_active{
+    text-align: right;
+    color: #8b3100;
+}
+
+                            /* Main Content Styles */
 
 section{
     margin-bottom: 30px;
@@ -157,11 +259,23 @@ footer a{
 }
 
                             /* Books Grid Layout */
-.books{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    max-width: 100%;
-    gap: 10px;
+.books {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*2 columns of all images*/
+  gap: 10px;
+  /*space between images*/
+  padding: 10px;
+  /*space around the grid*/
+ grid-auto-flow: row dense;
+}
+
+.books [class^="im"]{
+    grid-column: auto !important;
+    grid-row: auto !important;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .books figure{
@@ -175,12 +289,11 @@ footer a{
 .im {
     /* Keep images responsive and preserve their natural aspect ratio.
        Do NOT force a square aspect ratio or stretch images. */
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    box-sizing: border-box;
-    display: block;
+      width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.25s ease;
 }
 
 .im1 {
@@ -206,18 +319,46 @@ footer a{
     grid-row: 3 / 6;
 }
 
-.books figure:hover img {
-  transform: scale(1.05);
+.hover-text {
+  opacity: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
 }
 
-/* .books img{
-   display: block;
-  width: 100%;
-  height: auto;
-  transition: transform 0.25s ease;
-  transform-origin: center center;
-  will-change: transform;
-} */
+.books figure:hover .hover-text {
+  opacity: 1;
+}
+
+.im:hover {
+    filter: blur(2px);
+    opacity: 0.90;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.books figure:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.im:hover {
+    filter:blur(2px);
+    opacity:0.9;
+    transform:scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.books img{
+    width: 100%;
+   transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
 
 .books > div{
@@ -237,31 +378,38 @@ article figure figcaption{
 } */
 
 /* For cell phones */
-@media (max-width: 480px)
+@media (max-width: 1024px)
 {
+    .hamburger-menu{
+        display: flex; 
+        /*ensure the hamburger menu is visible and aligned*/
+        align-items: center;
+        /* center the button vertically in the header*/
+    }
 
     #Home{
         padding: 0% 20px;
     }
 
   /* Navigation bar styling for mobile */ 
-nav{
-    margin: 0 auto;
-    margin-bottom: 50px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px 0;
-    line-height: 30px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrapx;
-    border-bottom: 4px solid #471900;
-    background: #852704;
-    z-index: 1000;
-    color: white;
+nav {
+ margin: 0 auto;
+ margin-bottom: 50px;
+ width: 100%;
+ box-sizing: border-box;
+ padding: 10px 20px;
+ line-height: 30px;
+ position: relative;
+ display:flex;
+ justify-content: space-between;
+ align-items:center;
+ flex-wrap: wrap;
+ border-bottom: 4px solid #000000;
+ background:#000000;
+z-index: 1000;
+color:white; 
 }
+
 
 /* Navigation link styling */
 nav a{
