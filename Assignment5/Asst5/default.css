@@ -206,7 +206,6 @@ footer a{
     grid-row: 3 / 6;
 }
 
-
 .books figure:hover img {
   transform: scale(1.05);
 }
