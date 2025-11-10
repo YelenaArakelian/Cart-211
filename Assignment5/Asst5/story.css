@@ -1,0 +1,9 @@
+/* story.css */
+
+/* 1. Increases space between lines inside the story paragraphs */
+#story-section p {
+  line-height: 1.7; /* 1.7 is a generous line-height for readability */
+
+  /* 2. Adds consistent vertical space BELOW each story paragraph */
+  margin-bottom: 25px;
+}
