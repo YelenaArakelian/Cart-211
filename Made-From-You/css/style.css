@@ -64,6 +64,12 @@ main {
   transition: background-color 0.3s;
 }
 
+.start-button:hover,
+.next-button:hover {
+  background-color: #00ffaa;
+  color: #111;
+}
+
 /* Small Screen friendly */
 @media (max-width: 768px) {
   main {
@@ -81,13 +87,10 @@ main {
   .second-paragraph { font-size: 18px; }
 }
 
-.start-button:hover,
-.next-button:hover {
-  background-color: #00ffaa;
-  color: #111;
-}
 
-/* --- Page 2: Click Counter Styling --- */
+
+
+/* --- PAGE 2: Cost per Click --- */
 #click-counter {
   font-size: 5em;
   color: #ff0000; /* A distinct color for the metric */
