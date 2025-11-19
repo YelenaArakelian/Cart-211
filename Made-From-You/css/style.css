@@ -28,39 +28,57 @@ body {
 main {
   position: relative;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.85); /* Black, 85% opaque */
+  background-color: rgba(0, 0, 0, 0.85); /* Color black, 85% opaque */
 
-  /* Define the content box */
-  margin: 50px auto; /* Centers the box horizontally */
-  padding: 30px; /* Space inside the box */
-  width: 90%; /* Use 90% of the screen width */
-  max-width: 800px; /* Keeps the content from getting too wide on large screens */
+  /* Define the content box: narrower, centered and less dominating */
+  margin: 20px auto; /* More vertical space and centered horizontally */
+  padding: 24px; /* Slightly smaller inside padding */
+  width: 38%; /* Narrower so the box doesn't take up much of the screen */
+  max-width: 520px; /* Keeps the content from getting too wide on large screens */
+  min-width: 280px; /* Prevent it from becoming unusably small on wide screens */
 
   border-radius: 8px; /* Optional: Soften the corners */
 }
 
 .spaced-paragraph {
-  margin-top: 50px; 
-  font-size: 25px;
+  margin-top: 30px;
+  font-size: 18px;
 }
 
 .second-paragraph {
-  margin-top: +90px;
-  font-size: 30px;
+  margin-top: 40px;
+  font-size: 22px;
 }
 
 /* --- Navigation Buttons --- */
 .start-button,
 .next-button {
-  font-size: 30px;
+  font-size: 20px;
   display: inline-block;
-  padding: 50px 60px;
+  padding: 18px 28px; /* Smaller buttons so they don't dominate the layout */
   background-color: #333;
   color: #00ffaa; /* A neon color for tech/data feel */
   text-decoration: none;
   border: 2px solid #00ffaa;
-  margin-top: 100px;
+  margin-top: 30px;
   transition: background-color 0.3s;
+}
+
+/* Small Screen friendly */
+@media (max-width: 768px) {
+  main {
+    width: 90%;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 18px;
+  }
+  .start-button,
+  .next-button {
+    padding: 12px 18px;
+    font-size: 18px;
+  }
+  .spaced-paragraph { font-size: 16px; }
+  .second-paragraph { font-size: 18px; }
 }
 
 .start-button:hover,
