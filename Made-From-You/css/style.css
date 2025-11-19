@@ -1,11 +1,12 @@
 /* --- General Page Styling --- */
 body {
-  font-family: sans-serif; /* Use a readable, simple font */
+  font-family: 'Quantico', sans-serif; /* A tech-inspired font */
   background-color: #111; /* Dark background to reflect the theme */
   color: #eee;
   margin: 0;
-  padding: 20px;
+  padding: 70px;
   text-align: center;
+  
 }
 
 /* --- Background Video Styling --- */
@@ -38,9 +39,20 @@ main {
   border-radius: 8px; /* Optional: Soften the corners */
 }
 
+.spaced-paragraph {
+  margin-top: 50px; 
+  font-size: 25px;
+}
+
+.second-paragraph {
+  margin-top: +90px;
+  font-size: 30px;
+}
+
 /* --- Navigation Buttons --- */
 .start-button,
 .next-button {
+  font-size: 30px;
   display: inline-block;
   padding: 50px 60px;
   background-color: #333;
