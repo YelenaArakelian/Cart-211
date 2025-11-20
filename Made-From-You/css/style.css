@@ -91,7 +91,7 @@ main {
 }
 
 /* --- PAGE 2: Cost per Click --- */
-#click-counter {
+#clickCount {
   font-size: 5em;
   color: #ff0000; /* A distinct color for the metric */
   margin: 70px 0;
@@ -99,12 +99,12 @@ main {
 
 .click-info {
   position: absolute;
-  top: 150px;
+  top: 30px;
   right: 50px; /* Pushes it in from the RIGHT edge */
   width: 300px; /* Set a fixed width */
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.5);
-  border-right: 5px solid #ff0000;
+  border-right: 5px solid #0fc2bf;
   z-index: 10;
   text-align: left; /* Keep text aligned inside the box */
 }
