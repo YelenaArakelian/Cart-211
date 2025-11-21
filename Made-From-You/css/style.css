@@ -91,24 +91,162 @@ main {
 }
 
 /* --- PAGE 2: Cost per Click --- */
+:root {
+  --neon: #00ffaa;
+  --panel-bg: rgba(0, 0, 0, 0.75);
+  --popup-bg: rgba(10, 12, 14, 0.6);
+}
+
+/* Background video */
+#video-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* REMOVE PAGE 1 PADDING!! */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Quantico", sans-serif;
+  color: #eee;
+}
+
+/* PAGE WRAPPER — grid + right panel */
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  padding: 40px;
+  width: calc(100% - 320px);
+  box-sizing: border-box;
+}
+
+/* POPUP GRID */
+.popup-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  grid-template-rows: 220px 220px;
+  grid-template-areas:
+    "top tall"
+    "left right";
+  gap: 25px;
+}
+
+/* GRID AREAS */
+.box-top {
+  grid-area: top;
+}
+.box-tall {
+  grid-area: tall;
+  min-height: 460px;
+}
+.box-left {
+  grid-area: left;
+}
+.box-right {
+  grid-area: right;
+}
+
+/* POPUPS */
+.popup {
+  background: var(--popup-bg);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 18px;
+  color: #e8f7ee;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.popup:hover {
+  transform: scale(1.03);
+  border-color: var(--neon);
+  box-shadow: 0 0 12px var(--neon);
+}
+
+.popup-title {
+  font-weight: bold;
+  color: var(--neon);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.popup-content {
+  display: none;
+  margin-top: 8px;
+  color: #d6ffea;
+  font-size: 0.95rem;
+}
+
+/* On open */
+.popup.open {
+  transform: scale(1.1);
+  border-color: var(--neon);
+  box-shadow: 0 0 20px var(--neon);
+}
+
+.popup.open .popup-content {
+  display: block;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  background: var(--panel-bg);
+  border-left: 2px solid var(--neon);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.right-panel h2 {
+  color: var(--neon);
+  margin-top: 0;
+}
+
 #clickCount {
-  font-size: 5em;
-  color: #ff0000; /* A distinct color for the metric */
-  margin: 70px 0;
+  font-size: 4rem;
+  color: var(--neon);
+  margin: 20px 0;
 }
 
-.click-info {
-  position: absolute;
-  top: 30px;
-  right: 50px; /* Pushes it in from the RIGHT edge */
-  width: 300px; /* Set a fixed width */
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-right: 5px solid #0fc2bf;
-  z-index: 10;
-  text-align: left; /* Keep text aligned inside the box */
+.panel-subtitle {
+  margin-top: 40px;
+  color: var(--neon);
 }
 
+#revealMessage {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.next-button {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 14px 24px;
+  border: 2px solid var(--neon);
+  color: var(--neon);
+  text-decoration: none;
+}
+
+.next-button:hover {
+  background: var(--neon);
+  color: black;
+}
 /* --- Page 3: Interest Tracking Styling --- */
 .interest-list {
   list-style: none;

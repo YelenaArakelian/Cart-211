@@ -1,38 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <video
-      id="video-background"
-      class="Page2Background"
-      autoplay
-      loop
-      muted
-      playsinline
-    >
-      <source src="videos/Page2.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <header></header>
+<body>
+  <video
+    id="video-background"
+    class="Page2Background"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    <source src="videos/Page2.mp4" type="video/mp4" />
+  </video>
 
-    <main class="click-info">
+  <div class="page-layout">
+    <!-- LEFT GRID -->
+    <div class="popup-grid">
+      <div class="popup box-top" data-id="1">
+        <div class="popup-title">Behavioral Surplus</div>
+        <div class="popup-content">
+          “These behavioral data… would now also be put to use in the service of
+          targeting advertising.”
+        </div>
+      </div>
+
+      <div class="popup box-tall" data-id="2">
+        <div class="popup-title">Data Exhaust</div>
+        <div class="popup-content">
+          “Google exploited information that is a by-product of user
+          interactions, or data exhaust.”
+        </div>
+      </div>
+
+      <div class="popup box-left" data-id="3">
+        <div class="popup-title">Inferred Data</div>
+        <div class="popup-content">
+          “User profile information may be inferred or deduced from user actions
+          even when users do not directly provide it.”
+        </div>
+      </div>
+
+      <div class="popup box-right" data-id="4">
+        <div class="popup-title">Signals</div>
+        <div class="popup-content">
+          “Every action a user performs is considered a signal to be analyzed
+          and fed back into the system.”
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel">
       <h2>Cost Per-Click</h2>
-      <p>Every time you click anywhere on this page, your action is noted.</p>
+      <p>Every click is logged.</p>
+
       <div id="clickCount">0</div>
+
+      <div class="panel-subtitle">Latest Signal</div>
+      <div id="revealMessage">Click a panel to reveal it.</div>
+
       <a href="page3.html" class="next-button">Next</a>
-    </main>
+    </div>
+  </div>
 
-    <footer></footer>
-
-    <script src="js/page2.js"></script>
-  </body>
-</html>
+  <script src="js/page2.js"></script>
+</body>
