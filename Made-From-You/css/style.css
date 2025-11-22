@@ -1,278 +1,405 @@
-  /* --- General Page Styling --- */
-  body {
-    font-family: 'Quantico', sans-serif; /* A tech-inspired font */
-    background-color: #111; /* Dark background to reflect the theme */
-    color: #eee;
-    margin: 0;
-    padding: 70px;
-    text-align: center;
-    
-  }
-
-  /* --- Background Video Styling --- */
-  #video-background {
-    /* Existing positioning and sizing rules */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    pointer-events: none;
-    opacity: 0.3;
-  }
-
-  main {
-    position: relative;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.85); /* Color black, 85% opaque */
-
-    /* Define the content box: narrower, centered and less dominating */
-    margin: 20px auto; /* More vertical space and centered horizontally */
-    padding: 24px; /* Slightly smaller inside padding */
-    width: 38%; /* Narrower so the box doesn't take up much of the screen */
-    max-width: 520px; /* Keeps the content from getting too wide on large screens */
-    min-width: 280px; /* Prevent it from becoming unusably small on wide screens */
-
-
-    border-radius: 8px; /* Optional: Soften the corners */
-  }
-
-  .spaced-paragraph {
-    margin-top: 30px;
-    font-size: 18px;
-  }
-
-  .second-paragraph {
-    margin-top: 40px;
-    font-size: 22px;
-  }
-
-  /* --- Navigation Buttons --- */
-  .start-button,
-  .next-button {
-    font-size: 20px;
-    display: inline-block;
-    padding: 18px 28px; /* Smaller buttons so they don't dominate the layout */
-    background-color: #333;
-    color: #00ffaa; /* A neon color for tech/data feel */
-    text-decoration: none;
-    border: 2px solid #00ffaa;
-    margin-top: 30px;
-    transition: background-color 0.3s;
-  }
-
-  .start-button:hover,
-  .next-button:hover {
-    background-color: #00ffaa;
-    color: #111;
-  }
-
-  /* Small Screen friendly */
-  @media (max-width: 768px) {
-    main {
-      width: 90%;
-      max-width: 720px;
-      margin: 40px auto;
-      padding: 18px;
-    }
-    .start-button,
-    .next-button {
-      padding: 12px 18px;
-      font-size: 18px;
-    }
-    .spaced-paragraph { font-size: 16px; }
-    .second-paragraph { font-size: 18px; }
-  }
-
-
-
-
-/* --- PAGE 2: Cost per Click --- */
+/* PAGE 1: INTRODUCTION PAGE STYLING */
+/* --- General Page Styling --- */
+body {
+  font-family: "Quantico", sans-serif; /* A tech-inspired font */
+  background-color: #111; /* Dark background to reflect the theme */
+  color: #eee;
+  margin: 0;
+  padding: 70px;
+  text-align: center;
+}
 
 /* --- Background Video Styling --- */
-#page2-video-bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    pointer-events: none; 
-    opacity: 0.35; 
+#video-background {
+  /* Existing positioning and sizing rules */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
-/* --- Split Screen Grid --- */
-.page-layout {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* Left (Popups) is 2/3, Right (Counting click box) is 1/3 */
-    gap: 30px; 
-    
+main {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.85); /* Color black, 85% opaque */
+
+  /* Define the content box: narrower, centered and less dominating */
+  margin: 20px auto; /* More vertical space and centered horizontally */
+  padding: 24px; /* Slightly smaller inside padding */
+  width: 38%; /* Narrower so the box doesn't take up much of the screen */
+  max-width: 520px; /* Keeps the content from getting too wide on large screens */
+  min-width: 280px; /* Prevent it from becoming unusably small on wide screens */
+
+  border-radius: 8px; /* Optional: Soften the corners */
+}
+
+.spaced-paragraph {
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.second-paragraph {
+  margin-top: 40px;
+  font-size: 22px;
+}
+
+/* --- Navigation Buttons --- */
+.start-button,
+.next-button {
+  font-size: 20px;
+  display: inline-block;
+  padding: 18px 28px; /* Smaller buttons so they don't dominate the layout */
+  background-color: #333;
+  color: #00ffaa; /* A neon color for tech/data feel */
+  text-decoration: none;
+  border: 2px solid #00ffaa;
+  margin-top: 30px;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover,
+.next-button:hover {
+  background-color: #00ffaa;
+  color: #111;
+}
+
+/* Small Screen friendly */
+@media (max-width: 768px) {
+  main {
     width: 90%;
-    max-width: 1200px;
-    margin: 50px auto; 
-    position: relative;
-    z-index: 10; /* Ensuring th content is above the video */
-    align-items: start;
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 18px;
+  }
+  .start-button,
+  .next-button {
+    padding: 12px 18px;
+    font-size: 18px;
+  }
+  .spaced-paragraph {
+    font-size: 16px;
+  }
+  .second-paragraph {
+    font-size: 18px;
+  }
 }
 
-/* --- Right Panel: Click Counter Box --- */
-.right-panel {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 30px; 
-    border-radius: 8px;
-    text-align: center;
+/* --- PAGE 2: COST PER CLICK --- */
+
+body {
+  font-family: "Quantico", sans-serif;
+  background-color: #111;
+  color: #eee;
+  margin: 0;
+  padding: 0; /* Removed padding to let the video fill edges */
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
 }
 
-/* --- Left Grid: Popup Panels --- */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BACKGROUND VIDEO STYLING */
+#video-background,/* Shared styles for both video IDs */
+#page2-video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  pointer-events: none; /* Allows clicks to pass through */
+  opacity: 0.35;
+}
+
+/* Header Section */
+.page-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-right: 400px;
+}
+
+.page-header h1 {
+  font-size: 3.5em;
+  color: #4dff00;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(77, 255, 0, 0.5);
+}
+
+.page-header p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 10px auto 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* Layout Container */
+.page-layout {
+  display: block; /* Standard block layout */
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  padding-right: 400px;
+  padding-bottom: 100px; /* Extra space at bottom for scrolling */
+}
+
+/* Left Grid */
 .popup-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* Increased gap for better spacing */
-    align-content: start; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columns */
+  gap: 50px; /* big gap between panels */
+  align-content: start;
 }
 
 .popup {
-    background-color: rgba(0, 255, 13, 0.1); 
-    border: 2px solid #00ffaa; /* Thicker border for visibility */
-    padding: 20px;
-    cursor: pointer;
-    transition: all 0.4s ease; /* Smooth animation */
-    
-    /* 1. MAKE THEM BIG SQUARES INITIALLY */
-    height: 200px; 
-    
-    /* 2. CENTER THE TITLE IN THE SQUARE */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Vertically center */
-    align-items: center;     /* Horizontally center */
-    
-    overflow: hidden; 
-    position: relative;
+  background-color: rgba(0, 255, 170, 0.05);
+  border: 2px solid #00ff55; /* Neon Green Border */
+  padding: 30px;
+  cursor: pointer;
+  /* Big Square */
+  height: 300px;
+  /* Center Content in Panel */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
 }
 
 .popup:hover {
-    background-color: rgba(0, 255, 170, 0.2);
-    transform: scale(1.02); /* Subtle zoom effect on hover */
+  background-color: rgba(0, 255, 170, 0.15);
+  transform: scale(1.02);
 }
 
-/* --- OPEN STATE (When clicked) --- */
+/* Open Panel Status (Clicked) */
 .popup.open {
-    /* 3. EXPAND TO FIT CONTENT */
-    height: auto; 
-    min-height: 200px; /* Ensure it never shrinks smaller than the square */
-    
-    /* Move items to the top-left so text is readable */
-    justify-content: flex-start; 
-    align-items: flex-start;
-    
-    background-color: rgba(0, 255, 170, 0.25);
+  height: auto;
+  min-height: 300px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #00ff55;
 }
 
 .popup-title {
-    font-weight: bold;
-    color: #00ffaa;
-    font-size: 1.6em; /* Bigger, clearer title */
-    text-align: center;
-    transition: all 0.3s;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4dff00;
+  font-size: 2em;
 }
 
-/* Adjust title style when the box is open */
+/* Title style when open */
 .popup.open .popup-title {
-    font-size: 1.4em; /* Slightly smaller to make room for text */
-    text-align: left;
-    border-bottom: 1px solid #00ff15; /* Add a line under title */
-    width: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+  font-size: 1.5em;
+  text-align: left;
+  border-bottom: 1px solid #00ffaa;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .popup-content {
-    font-size: 1.1em; /* Easy to read text size */
-    line-height: 1.5;
-    color: #fff;
-    
-    /* HIDE CONTENT INITIALLY */
-    display: none; 
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: left;
+  display: none; /* Hidden initially */
 }
-
-/* SHOW CONTENT WHEN OPEN */
+/* Show content when open */
 .popup.open .popup-content {
-    display: block; /* Reveal the text */
-    animation: fadeIn 0.5s; /* Simple fade in effect */
+  display: block;
 }
 
-  /* --- Page 3: Interest Tracking Styling --- */
-  .interest-list {
-    list-style: none;
-    padding: 0;
+/* Right Panel */
+.right-panel {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 300px;
+  min-width: 280px;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 1px solid #00ffaa;
+  padding: 40px;
+  border-radius: 8px; /* Rounded Corners */
+  text-align: center;
+  z-index: 100;
+}
+
+/* Right Panel Header */
+.right-panel h2 {
+  margin-top: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#clickCount {
+  font-size: 90px;
+  color: #ff0000; /* Red Counter */
+  margin: 20px 0;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Creepy Popup */
+.creepy-popup {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #4dff00;
+  border: 1px solid #4dff00;
+  padding: 15px 20px;
+  font-family: "Quantico", sans-serif;
+  font-size: 1.1em;
+  border-radius: 4px;
+  pointer-events: none; /* Click through */
+  z-index: 200;
+  box-shadow: 0 0 15px #00ffaa;
+  max-width: 300px;
+}
+
+/* Button & Navigation */
+.next-button,
+.start-button {
+  display: inline-block;
+  font-size: 1.2em;
+  padding: 15px 40px;
+  background-color: #222;
+  color: #00ffaa;
+  border: 2px solid #00ffaa;
+  margin-top: 20px;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.next-button:hover,
+.start-button:hover {
+  background-color: #00ffaa;
+  color: #111;
+  box-shadow: 0 0 15px #00ffaa;
+}
+
+/* Mobile version */
+@media (max-width: 1100px) {
+  .page-header {
+    padding-right: 0;
+    margin-top: 20px;
   }
 
-  .interest-list li {
-    margin: 40px 0;
-    position: relative; /* for positioning the pop-up label */
+  .page-layout {
+    padding-right: 0;
+    width: 35%;
   }
 
-  .trackable-link {
-    color: inherit;
-    text-decoration: none;
-    font-size: 1.5em;
-    /* Transition for smooth color change */
-    transition: color 0.2s;
+  .popup-grid {
+    grid-template-columns: 1fr; /* 1 Column */
+    margin-bottom: 400px; /* Space for the bottom box */
   }
 
-  /* Topic A: Initial color and hover color */
-  .topic-a {
-    color: #00cc3a;
+  .right-panel {
+    /* Move HUD to bottom of screen on mobile */
+    margin-left: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    right: 0;
+    left: 0;
+    width: 10%;
+    transform: none;
+    border-radius: 0;
+    padding: 20px;
+    border-top: 2px solid #00ff55;
   }
-  .topic-a:hover {
-    color: #ff6200; /* Hover color */
-  }
+}
 
-  /* Topic B: Initial color and hover color */
-  .topic-b {
-    color: #00cc3a;
-  }
-  .topic-b:hover {
-    color: #ae00ff; /* Hover color */
-  }
+/* --- Page 3: Interest Tracking Styling --- */
+.interest-list {
+  list-style: none;
+  padding: 0;
+}
 
-  /* Topic C: Initial color and hover color */
-  .topic-c {
-    color: #00cc3a;
-  }
-  .topic-c:hover {
-    color: #ff0000; /* Hover color */
-  }
+.interest-list li {
+  margin: 40px 0;
+  position: relative; /* for positioning the pop-up label */
+}
 
-  /* Style for the pop-up label */
-  .interest-label {
-    /* Initially hidden */
-    display: none;
-    position: absolute;
-    right: -200px; /* Position it to the right of the link */
-    top: 5px;
-    padding: 5px 10px;
-    background-color: #00ffaa;
-    color: #111;
-    font-size: 0.8em;
-    font-weight: bold;
-    border-radius: 3px;
-    white-space: nowrap; /* Keep it on one line */
-    opacity: 0; /* Use opacity for a slight fade-in effect */
-    transition: opacity 0.3s;
-  }
+.trackable-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.5em;
+  /* Transition for smooth color change */
+  transition: color 0.2s;
+}
 
-  /* Show the label when the link is hovered */
-  .trackable-link:hover + .interest-label {
-    content: "Interest: Confirmed"; /* THIS IS THE POP-UP MESSAGE */
-    display: block;
-    opacity: 1;
-  }
+/* Topic A: Initial color and hover color */
+.topic-a {
+  color: #00cc3a;
+}
+.topic-a:hover {
+  color: #ff6200; /* Hover color */
+}
+
+/* Topic B: Initial color and hover color */
+.topic-b {
+  color: #00cc3a;
+}
+.topic-b:hover {
+  color: #ae00ff; /* Hover color */
+}
+
+/* Topic C: Initial color and hover color */
+.topic-c {
+  color: #00cc3a;
+}
+.topic-c:hover {
+  color: #ff0000; /* Hover color */
+}
+
+/* Style for the pop-up label */
+.interest-label {
+  /* Initially hidden */
+  display: none;
+  position: absolute;
+  right: -200px; /* Position it to the right of the link */
+  top: 5px;
+  padding: 5px 10px;
+  background-color: #00ffaa;
+  color: #111;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-radius: 3px;
+  white-space: nowrap; /* Keep it on one line */
+  opacity: 0; /* Use opacity for a slight fade-in effect */
+  transition: opacity 0.3s;
+}
+
+/* Show the label when the link is hovered */
+.trackable-link:hover + .interest-label {
+  content: "Interest: Confirmed"; /* THIS IS THE POP-UP MESSAGE */
+  display: block;
+  opacity: 1;
+}

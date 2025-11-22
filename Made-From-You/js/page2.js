@@ -19,11 +19,9 @@ document.querySelectorAll(".popup").forEach((popup) => {
   popup.addEventListener("click", (event) => {
     // Expand / collapse the popup
     popup.classList.toggle("open");
-
-    // Get popup ID
+    // popup ID
     let id = popup.getAttribute("data-id");
-
-    // Display the message on right panel
+    // Display message on right panel
     document.getElementById("revealMessage").textContent = revealMessage[id];
   });
 });
