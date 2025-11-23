@@ -264,22 +264,6 @@ a {
   text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
-/* Creepy Popup */
-.creepy-popup {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.95);
-  color: #4dff00;
-  border: 1px solid #4dff00;
-  padding: 15px 20px;
-  font-family: "Quantico", sans-serif;
-  font-size: 1.1em;
-  border-radius: 4px;
-  pointer-events: none; /* Click through */
-  z-index: 200;
-  box-shadow: 0 0 15px #00ffaa;
-  max-width: 300px;
-}
-
 /* Button & Navigation */
 .next-button,
 .start-button {
@@ -300,7 +284,6 @@ a {
 .start-button:hover {
   background-color: #00ffaa;
   color: #111;
-  box-shadow: 0 0 15px #00ffaa;
 }
 
 /* Mobile version */
@@ -331,12 +314,29 @@ a {
     width: 10%;
     transform: none;
     border-radius: 0;
-    padding: 20px;
+    padding: 1px;
     border-top: 2px solid #00ff55;
   }
 }
 
 /* --- Page 3: Interest Tracking Styling --- */
+
+/* Background Video Styling */
+#page3-video-bg {
+  /* Existing positioning and sizing rules */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .interest-list {
   list-style: none;
   padding: 0;
