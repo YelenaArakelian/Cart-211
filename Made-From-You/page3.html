@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Made From You - Interest Tracking</title>
     <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+</head>
+<body>
     <video id="page3-video-bg" autoplay loop muted playsinline>
-      <source src="videos/Page3.mp4" type="video/mp4" />
+        <source src="videos/Page3.mp4" type="video/mp4" />
     </video>
-    <header></header>
 
+ <div class="page-header" id="page3-header">
     <h2 class="page3-title">Interest Tracking</h2>
-
-    <p class="page3-intro-paragraph">
-      Are you interested in these topics? Just bring your mouse close to them to
-      confirm...
-    </p>
-
+</div>
     <main id="page3-main">
-      <ul class="interest-list">
-        <li>
-          <a href="#" class="trackable-link topic-a">Topic A: Privacy</a>
-          <span class="interest-label"></span>
-        </li>
-        <li>
-          <a href="#" class="trackable-link topic-b">Topic B: Big Data</a>
-          <span class="interest-label"></span>
-        </li>
-        <li>
-          <a href="#" class="trackable-link topic-c">Topic C: Consumerism</a>
-          <span class="interest-label"></span>
-        </li>
-      </ul>
-      <a href="page4.html" class="next-button">Next</a>
+        
+        <div class="left-info-floating">
+            <h3>How It Works</h3>
+            <p>
+               By tracking with your cursor where you pause, 
+                how fast you scroll, and what you hover over, we build a concept of your interests, without you needing to click anything.
+            </p>
+            <p>
+                You don't need to click to give us data. <br>
+                Your hesitation is enough.
+            </p>
+        </div>
+
+        <p class="page3-intro-paragraph">
+            Are you interested in these topics? <br> Just bring your mouse close...
+        </p>
+
+        <ul class="interest-list">
+            
+            <li>
+                <a href="#" class="trackable-link topic-a">Topic A: Privacy</a>
+                
+                <span class="creepy-right-popup">
+                    Logging Data...<br>Subject Identified.
+                </span>
+            </li>
+
+            <li>
+                <a href="#" class="trackable-link topic-b">Topic B: Big Data</a>
+                
+                <span class="creepy-right-popup">
+                    Logging Data...<br>Profile Updated.
+                </span>
+            </li>
+
+            <li>
+                <a href="#" class="trackable-link topic-c">Topic C: Consumerism</a>
+                
+                <span class="creepy-right-popup">
+                    Logging Data...<br>Information Acquired.
+                </span>
+            </li>
+        </ul>
+
+<div id="final-reveal-message">
+  <p>You hovered over everything. Interesting how easy it was to guide your curiosity.</p>
+</div>
+
+
+        <a href="page4.html" class="next-button">Next</a>
     </main>
 
-    <footer></footer>
-
     <script src="js/page3.js"></script>
-  </body>
-</html>
+</body>
+</html> 
