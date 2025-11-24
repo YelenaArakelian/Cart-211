@@ -4,16 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Made From You - Page 4</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <header></header>
+    <video id="page4-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page4.mp4" type="video/mp4" />
+    </video>
 
-    <main></main>
+    <div class="page-header">
+      <h1>Data Fingerprint</h1>
+      <p>
+        Your mouse movement is unique — move inside the box below to continue.
+      </p>
+    </div>
 
-    <footer></footer>
+    <main id="page4-main" class="scan-container">
+      <div id="scanBox">
+        <p class="scan-instruction">Move your mouse here to begin scanning…</p>
+        <p id="scanResult" class="scan-result">Fingerprint Captured.</p>
+      </div>
 
-    <script src="js/script.js"></script>
+      <a href="page5.html" id="page4-next" class="next-button disabled">Next</a>
+    </main>
+
+    <script src="js/page4.js"></script>
   </body>
 </html>
