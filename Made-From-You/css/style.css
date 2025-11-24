@@ -334,12 +334,42 @@ a {
   height: auto;
   z-index: -100;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.7;
+}
+
+#page3-main {
+  position: relative;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 24px;
+  width: 38%;
+  max-width: 520px;
+  min-width: 280px;
+  border-radius: 8px;
+  margin: 15vh auto;
+}
+
+.page3-title {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.page3-main {
+  font-size: 30px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.page3-intro-paragraph {
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 .interest-list {
   list-style: none;
   padding: 0;
+  margin: 100px;
 }
 
 .interest-list li {
@@ -358,6 +388,7 @@ a {
 /* Topic A: Initial color and hover color */
 .topic-a {
   color: #00cc3a;
+  font-size: 30px;
 }
 .topic-a:hover {
   color: #ff6200; /* Hover color */
@@ -366,6 +397,7 @@ a {
 /* Topic B: Initial color and hover color */
 .topic-b {
   color: #00cc3a;
+  font-size: 30px;
 }
 .topic-b:hover {
   color: #ae00ff; /* Hover color */
@@ -374,6 +406,7 @@ a {
 /* Topic C: Initial color and hover color */
 .topic-c {
   color: #00cc3a;
+  font-size: 30px;
 }
 .topic-c:hover {
   color: #ff0000; /* Hover color */
