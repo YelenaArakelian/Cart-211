@@ -80,7 +80,7 @@ main {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 430px) {
   main {
     width: 90%;
     padding: 18px;
@@ -210,6 +210,56 @@ main {
   text-shadow: 0 0 10px red;
 }
 
+/* PAGE 2 — mobile (430px) */
+@media (max-width: 430px) {
+  .page-layout {
+    width: 95%;
+    padding-right: 0; /* remove desktop right-panel space */
+    padding-bottom: 70px;
+  }
+
+  /* Popup grid stacks */
+  .popup-grid {
+    grid-template-columns: 1fr; /* stack popups */
+    gap: 20px;
+  }
+
+  /* Popup open state adjustments */
+  .popup {
+    height: auto;
+    min-height: 180px;
+    padding: 18px;
+  }
+
+  /* Popup title adjustments */
+  .popup-title {
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  .popup-content {
+    font-size: 1em;
+  }
+
+  /* right panel becomes normal block below */
+  .right-panel {
+    position: static;
+    transform: none;
+    width: auto;
+    margin: 20px auto 0;
+    padding: 20px;
+  }
+
+  #clickCount {
+    font-size: 65px;
+  }
+
+  .next-button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
 /* =========================================================
    PAGE 3 — INTEREST TRACKING
 ========================================================= */
@@ -319,6 +369,70 @@ main {
   transform: translateY(0);
 }
 
+/* PAGE 3 — mobile (430px) */
+@media (max-width: 430px) {
+  #page3-main {
+    width: 92%;
+    min-width: 0;
+    max-width: 95%;
+    height: auto;
+    padding: 22px;
+  }
+
+  .page3-title {
+    font-size: 2.2em;
+  }
+
+  .page3-intro-paragraph {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  /* floating left info becomes static block */
+  .left-info-floating {
+    position: static;
+    width: auto;
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .interest-list {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .interest-list li {
+    font-size: 22px;
+    margin: 40px 0;
+  }
+
+  /* popups appear under topic (no offscreen issues) */
+  .creepy-right-popup {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    width: 90%;
+    font-size: 15px;
+    padding: 8px;
+    opacity: 0;
+  }
+
+  .interest-list li:hover .creepy-right-popup {
+    opacity: 1;
+  }
+
+  #final-reveal-message {
+    font-size: 1.05em;
+  }
+
+  .next-button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+}
+
 /* =========================================================
    PAGE 4 — INTEREST TRACKING
 ========================================================= */
@@ -387,4 +501,33 @@ main {
   font-size: 22px;
   margin-top: 40px;
   transform: translateY(10px);
+}
+
+/* PAGE 4 — mobile (430px) */
+@media (max-width: 430px) {
+  #page4-main.scan-container {
+    width: 92%;
+    min-width: 0;
+    max-width: 95%;
+    padding: 22px;
+  }
+
+  #scanBox {
+    height: 190px;
+    padding-top: 55px; /* adjust for smaller size */
+  }
+
+  .scan-instruction {
+    font-size: 16px;
+  }
+
+  .scan-result {
+    font-size: 18px;
+    margin-top: 28px;
+  }
+
+  .next-button {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
 }
