@@ -3,20 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You - Page 5</title>
+    <title>Made From You</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
-    <header></header>
+    <video id="page5-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page5.mp4" type="video/mp4" />
+    </video>
 
-    <main></main>
+    <div class="page-header">
+      <h1>Speed of Consumption</h1>
+      <p>Scroll to continue. Your behavior will be recorded.</p>
+    </div>
 
-    <footer></footer>
+    <main id="page5-main">
+      <div class="scroll-content">
+        <!-- lots of fake content to scroll -->
+        <p>Lorem ipsum dolor sit amet... (repeat as needed)</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <!-- Copy this 50x or I’ll generate a block for you -->
+      </div>
 
-    <script src="js/script.js"></script>
+      <div id="scrollReveal" class="scroll-reveal">
+        Depth of scroll reached.<br />
+        Speed logged.
+      </div>
+
+      <a href="page6.html" id="page5-next" class="next-button disabled">Next</a>
+    </main>
+
+    <script src="js/page5.js"></script>
   </body>
 </html>
