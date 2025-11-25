@@ -388,9 +388,3 @@ main {
   margin-top: 40px;
   transform: translateY(10px);
 }
-
-/* Next button */
-.next-button.disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
