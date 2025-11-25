@@ -535,6 +535,8 @@ main {
 /* =========================================================
    PAGE 5 — Speed of Consumption
 ========================================================= */
+
+/* Background video */
 #page5-video-bg {
   position: fixed;
   top: 50%;
@@ -547,35 +549,102 @@ main {
   opacity: 0.35;
 }
 
+/* Center black box */
 #page5-main {
+  position: relative;
   width: 60%;
+  max-width: 650px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0.85);
   padding: 40px;
   border-radius: 15px;
-  min-height: 1200px;
+  min-height: 1200px; /* makes page long enough to scroll */
   z-index: 10;
-  position: relative;
 }
 
+/* Feed text */
 .scroll-content p {
-  color: #65cee9;
+  color: #b6d508e2;
   font-size: 18px;
   line-height: 2;
   margin-bottom: 30px;
+  text-align: center;
 }
 
+/* Reveal message */
 .scroll-reveal {
   opacity: 0;
   transition: 0.8s ease;
   color: #4dff00;
   font-size: 1.6em;
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
   transform: translateY(20px);
 }
 
-.next-button.disabled {
-  opacity: 0.4;
-  pointer-events: none;
+/* Side clickbait columns */
+.clickbait-side {
+  position: absolute;
+  top: 220px; /* where they start vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 400px;
+  z-index: 5;
+}
+
+.clickbait-side.left {
+  left: 40px;
+}
+
+.clickbait-side.right {
+  right: 40px;
+}
+
+.clickbait-side img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 130px 0;
+}
+
+right {
+  right: 6px;
+}
+
+.clickbait-side img {
+  width: 100%;
+}
+
+/* Mobile — hide side ads */
+@media (max-width: 430px) {
+  /* make the content box fit phone width */
+  #page5-main {
+    width: 6cm;
+    max-width: none;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  /* slightly smaller text so it doesn’t feel cramped */
+  .scroll-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  /* optional: smaller title on phones */
+  .page-header h1 {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+  }
+
+  .page-header p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .clickbait-background img {
+    width: 110px;
+    opacity: 0.2;
+  }
 }

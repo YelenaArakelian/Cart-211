@@ -5,8 +5,8 @@ const nextBtn = document.getElementById("page5-next");
 window.addEventListener("scroll", () => {
   // How far the user has scrolled (0 → 1)
   let scrollPercent =
-    window.scrollY / // Current scroll position
-    (document.documentElement.scrollHeight - window.innerHeight);
+    window.scrollY / // how many pixels already scrolled down.
+    (document.documentElement.scrollHeight - window.innerHeight); //total height of the whole page.
 
   // Once user scrolls past 90%
   if (scrollPercent >= 0.9) {
