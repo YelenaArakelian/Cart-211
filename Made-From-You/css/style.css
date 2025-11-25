@@ -446,7 +446,7 @@ main {
   min-height: 100%;
   z-index: -100;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.65;
 }
 
 /* Header */
@@ -530,4 +530,52 @@ main {
     font-size: 16px;
     padding: 12px 18px;
   }
+}
+
+/* =========================================================
+   PAGE 5 — Speed of Consumption
+========================================================= */
+#page5-video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+#page5-main {
+  width: 60%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  min-height: 1200px;
+  z-index: 10;
+  position: relative;
+}
+
+.scroll-content p {
+  color: #65cee9;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transition: 0.8s ease;
+  color: #4dff00;
+  font-size: 1.6em;
+  margin-top: 40px;
+  text-align: center;
+  transform: translateY(20px);
+}
+
+.next-button.disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
