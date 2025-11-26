@@ -3,17 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You - Page 10</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Made From You</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header></header>
+  <body class="page10">
+    <video id="page10-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page10.mp4" type="video/mp4" />
+    </video>
 
-    <main></main>
+    <div id="page10-container">
+      <h1 class="page10-title">Made From You</h1>
 
-    <footer></footer>
+      <p class="page10-subtitle">
+        We didn’t actually store your data here. But for next time, remember:
+      </p>
 
-    <script src="js/script.js"></script>
+      <!-- Centered reveal button -->
+      <button id="page10-reveal" class="page10-btn">SHOW THE LESSONS</button>
+
+      <!-- Two-column layout, hidden at first -->
+      <div id="page10-columns" class="page10-columns page10-hidden">
+        <!-- LEFT: what we learned -->
+        <div class="page10-col page10-col-left">
+          <h2 class="page10-col-title">WHAT WE LEARNED</h2>
+          <ul>
+            <li>How fast you react when something looks urgent.</li>
+            <br />
+            <br />
+            <li>When you click without reading the small text.</li>
+            <br />
+            <br />
+            <li>Which buttons your eyes are drawn to first.</li>
+            <br />
+            <br />
+            <li>How long you hesitate before making a choice.</li>
+            <br />
+            <br />
+            <li>Whether you accept everything, or try to review first.</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: what you can do -->
+        <div class="page10-col page10-col-right">
+          <h2 class="page10-col-title">WHAT YOU CAN DO</h2>
+          <ul>
+            <li>Slow down before clicking “Accept” or “Continue”.</li>
+            <br />
+            <br />
+            <li>
+              Look for dark patterns: timers, giant bright buttons, tiny “No”.
+            </li>
+            <br />
+            <br />
+            <li>
+              Use privacy tools (ad blockers, tracker blockers) when you can.
+            </li>
+            <br />
+            <br />
+            <li>Install VPN's when needed</li>
+            <br />
+            <br />
+            <li>
+              Remember: your behaviour is often more valuable than your name.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/page10.js"></script>
   </body>
 </html>

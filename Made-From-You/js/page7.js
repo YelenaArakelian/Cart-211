@@ -2,10 +2,10 @@
 let startTime = Date.now();
 
 // Get references to the buttons and result
-let yesBtn = document.getElementById("btn-yes");
-let noBtn = document.getElementById("btn-no");
+let yesButton = document.getElementById("btn-yes");
+let noButton = document.getElementById("btn-no");
 let result = document.getElementById("decision-result");
-let nextBtn = document.getElementById("page7-next");
+let nextButton = document.getElementById("page7-next");
 
 // This function runs when either YES or NO is clicked
 function handleClick(choiceText) {
@@ -24,7 +24,7 @@ function handleClick(choiceText) {
     " seconds. Decision speed logged.";
 
   // Show the NEXT button by removing the hidden class
-  nextBtn.classList.remove("page7-next-hidden");
+  nextButton.classList.remove("page7-next-hidden");
 
   // Stop the user from clicking the buttons again
   yesBtn.disabled = true;
@@ -32,11 +32,11 @@ function handleClick(choiceText) {
 }
 
 // Yes button click handler
-yesBtn.addEventListener("click", function () {
+yesButton.addEventListener("click", function () {
   handleClick("YES, CONTINUE");
 });
 
 // No button click handler
-noBtn.addEventListener("click", function () {
+noButton.addEventListener("click", function () {
   handleClick("NO, STOP");
 });
