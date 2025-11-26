@@ -3,17 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You - Page 9</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Shadow Profile</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header></header>
 
-    <main></main>
+  <body class="page9">
+    <video id="page9-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page9.mp4" type="video/mp4" />
+    </video>
+    <div id="page9-container">
+      <h1 class="page9-title">Your Profile</h1>
 
-    <footer></footer>
+      <p class="page9-subtitle">
+        From a few clicks and scrolls, this is what we could build about you.
+      </p>
 
-    <script src="js/script.js"></script>
+      <button id="reveal-profile" class="page9-reveal-btn">
+        REVEAL WHAT WE KNOW ABOUT YOU
+      </button>
+
+      <div id="profile-box" class="page9-profile-box page9-hidden">
+        <p>We don't know your name. We don’t need it.</p>
+        <p>We know how fast you react.</p>
+        <p>We know when you hesitate.</p>
+        <p>Your behaviour shapes your profile....</p>
+      </div>
+    </div>
+
+    <a href="page10.html" id="page9-next" class="next-button page9-next-hidden">
+      Next
+    </a>
+
+    <script src="js/page9.js"></script>
   </body>
 </html>
