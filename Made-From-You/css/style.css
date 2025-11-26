@@ -210,7 +210,7 @@ main {
   text-shadow: 0 0 10px red;
 }
 
-/* PAGE 2 — mobile (430px) */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   .page-layout {
     width: 95%;
@@ -369,7 +369,7 @@ main {
   transform: translateY(0);
 }
 
-/* PAGE 3 — mobile (430px) */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   #page3-main {
     width: 92%;
@@ -408,7 +408,7 @@ main {
     margin: 40px 0;
   }
 
-  /* popups appear under topic (no offscreen issues) */
+  /* popups appear under topic */
   .creepy-right-popup {
     position: static;
     transform: none;
@@ -503,7 +503,7 @@ main {
   transform: translateY(10px);
 }
 
-/* PAGE 4 — mobile (430px) */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   #page4-main.scan-container {
     width: 92%;
@@ -607,7 +607,7 @@ main {
   margin: 130px 0;
 }
 
-right {
+.right {
   right: 6px;
 }
 
@@ -615,7 +615,7 @@ right {
   width: 100%;
 }
 
-/* Mobile — hide side ads */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   /* make the content box fit phone width */
   #page5-main {
@@ -630,22 +630,6 @@ right {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 24px;
-  }
-
-  /* optional: smaller title on phones */
-  .page-header h1 {
-    font-size: 2.2em;
-    letter-spacing: 2px;
-  }
-
-  .page-header p {
-    font-size: 1em;
-    padding: 0 10px;
-  }
-
-  .clickbait-background img {
-    width: 110px;
-    opacity: 0.2;
   }
 }
 
@@ -762,7 +746,7 @@ right {
   display: none;
 }
 
-/* Next button position (bottom center) */
+/* Next button position */
 #page6-next {
   display: block;
   margin: 40px auto 60px auto;
@@ -773,7 +757,7 @@ right {
   text-align: center;
 }
 
-/* ------ Mobile layout (430px and smaller) ------ */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   /* 3×2 grid */
   #page6-button-area {
@@ -891,7 +875,7 @@ right {
   margin-top: 40px;
 }
 
-/* Mobile version */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   #page7-container {
     margin-top: 40px;
@@ -1017,7 +1001,7 @@ right {
   display: none;
 }
 
-/* Mobile tweaks */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   #page8-container {
     margin: 50px auto;
@@ -1130,7 +1114,7 @@ right {
 }
 
 /* =========================================================
-   PAGE 10 — Data Trail
+   PAGE 10 — Made from YOU
 ========================================================= */
 
 #page10-video-bg {
@@ -1246,7 +1230,7 @@ right {
   display: none;
 }
 
-/* Mobile: stack columns */
+/* Mobile responsiveness */
 @media (max-width: 430px) {
   #page10-container {
     margin-top: 60px;
