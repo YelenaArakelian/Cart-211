@@ -708,7 +708,7 @@ right {
   font-weight: bold;
 }
 
-/* Scattered positions */
+/* Scattered positions of clickbait buttons */
 .b1 {
   top: 12px;
   left: 6%;
@@ -775,7 +775,7 @@ right {
 
 /* ------ Mobile layout (430px and smaller) ------ */
 @media (max-width: 430px) {
-  /* turn the buttons into a 3×2 grid */
+  /* 3×2 grid */
   #page6-button-area {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -783,10 +783,10 @@ right {
     width: 90%;
     padding: 16px 24px;
     margin: 0 auto;
-    padding-bottom: 100px; /* EXTRA SPACE BELOW GRID */
+    padding-bottom: 100px;
   }
 
-  /* reset absolute positioning */
+  /* Buttons full width in grid */
   .trick-btn {
     position: static;
     width: 100%;
@@ -803,5 +803,115 @@ right {
 
   .page6-subtitle {
     font-size: 14px;
+  }
+}
+
+/* =========================================================
+   PAGE 7 — Decision Friction
+========================================================= */
+
+/* Background video */
+#page7-video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Main container */
+#page7-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-top: 60px;
+  color: #ff0000;
+}
+
+/* Title + subtitle */
+.page7-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #00ff66;
+}
+
+.page7-subtitle {
+  font-size: 20px;
+  color: #9af7d5;
+  margin-bottom: 40px;
+}
+
+/* YES / NO buttons */
+#decision-area {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.decision-btn {
+  background: #66ff00c3;
+  color: #000000;
+  border: none;
+  padding: 24px 40px;
+  font-weight: bold;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.decision-btn:hover {
+  background: #ffe600;
+}
+
+/* Where the result text goes */
+.decision-result {
+  font-size: 18px;
+  color: #ff6666;
+  margin-top: 60px;
+  min-height: 40px; /* keeps space even before text appears */
+}
+
+/* Hide the Next button at first */
+.page7-next-hidden {
+  display: none;
+}
+
+/* Next button */
+#page7-next {
+  padding: 16px 24px;
+  font-size: 40px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+/* Mobile version */
+@media (max-width: 430px) {
+  #page7-container {
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+
+  .page7-title {
+    font-size: 30px;
+  }
+
+  .page7-subtitle {
+    font-size: 16px;
+  }
+
+  #decision-area {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .decision-btn {
+    width: 100%;
   }
 }

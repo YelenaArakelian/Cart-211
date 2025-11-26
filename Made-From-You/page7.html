@@ -3,17 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You - Page 7</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Made From You</title>
+
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header></header>
 
-    <main></main>
+  <body class="page7">
+    <!-- Background video -->
+    <video id="page7-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page7.mp4" type="video/mp4" />
+    </video>
 
-    <footer></footer>
+    <!-- Everything for this page goes inside this container -->
+    <div id="page7-container">
+      <h1 class="page7-title">Decision Friction</h1>
 
-    <script src="js/script.js"></script>
+      <p class="page7-subtitle">
+        Two choices. We only care about how fast you decide.
+      </p>
+
+      <!-- YES / NO buttons -->
+      <div id="decision-area">
+        <button class="decision-btn" id="btn-yes">YES, CONTINUE</button>
+        <button class="decision-btn" id="btn-no">NO, STOP</button>
+      </div>
+
+      <p id="decision-result" class="decision-result"></p>
+
+      <a
+        href="page8.html"
+        id="page7-next"
+        class="next-button page7-next-hidden"
+      >
+        Next
+      </a>
+    </div>
+
+    <script src="js/page7.js"></script>
   </body>
 </html>
