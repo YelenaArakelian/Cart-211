@@ -1,22 +1,24 @@
-// Get all the scattered buttons
-const trickButtons = document.querySelectorAll(".trick-btn");
+const buttons = document.querySelectorAll(".trick-btn");
+const nextBtn = document.getElementById("page6-next");
+const centerMessage = document.getElementById("page6-message");
 
-// Get the message and the Next button
-const message = document.getElementById("page6-message");
-const nextButton = document.getElementById("page6-next");
-
-// When any button is clicked
-trickButtons.forEach((btn) => {
+buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    // Hide all buttons
-    trickButtons.forEach((b) => {
-      b.style.display = "none";
-    });
+    // Show the center message
+    centerMessage.style.display = "block";
 
-    // Show message
-    message.style.display = "block";
+    // Create creepy text under the clicked button
+    const msg = document.createElement("div");
+    msg.className = "page6-creepy-message show";
+    msg.innerText = "We recorded that click.";
 
-    // Show Next button
-    nextButton.style.display = "inline-block";
+    // Position message under clicked button
+    msg.style.left = btn.offsetLeft + "px";
+    msg.style.top = btn.offsetTop + btn.offsetHeight + 5 + "px";
+
+    document.getElementById("page6-button-area").appendChild(msg);
+
+    // Reveal NEXT button
+    nextBtn.classList.remove("page6-next-hidden");
   });
 });

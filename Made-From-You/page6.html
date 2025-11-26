@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You</title>
+    <title>Made From You – Trick Click</title>
+
+    <!-- Main stylesheet + font -->
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
@@ -11,36 +13,40 @@
     />
   </head>
 
-  <body class="page6">
-    <video autoplay muted playsinline id="background-video">
+  <body>
+    <!-- Background video -->
+    <video id="background-video" autoplay muted playsinline>
       <source src="videos/Page6.mp4" type="video/mp4" />
     </video>
+
+    <!-- Title + subtitle -->
     <h1 class="page6-title">The Trick Click</h1>
     <p class="page6-subtitle">
       Pick any button. Your reaction is the only thing we need.
     </p>
 
-    <!-- area where buttons are scattered -->
+    <!-- Scattered buttons -->
     <div id="page6-button-area">
       <button class="trick-btn b1">CLAIM YOUR REWARD</button>
       <button class="trick-btn b2">LIMITED TIME OFFER</button>
       <button class="trick-btn b3">YOU QUALIFY!</button>
-      <button class="trick-btn b4">CLICK TO CONTINUE</button>
+      <button class="trick-btn b4">FREE MONEY</button>
       <button class="trick-btn b5">UNLOCK BONUS</button>
       <button class="trick-btn b6">SEE WHAT YOU WON</button>
     </div>
 
-    <!-- message that appears AFTER a click -->
+    <!-- Main creepy message (shown after first click) -->
     <p id="page6-message" class="page6-message">
       Behavior profile saved.<br />
       Your impulse was all we needed.
     </p>
 
-    <!-- next button appears after the message -->
+    <!-- Next button (hidden until click) -->
     <a href="page7.html" id="page6-next" class="next-button page6-next-hidden">
       Next
     </a>
 
+    <!-- Page 6 logic -->
     <script src="js/page6.js"></script>
   </body>
 </html>
