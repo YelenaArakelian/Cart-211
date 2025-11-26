@@ -807,7 +807,7 @@ right {
 }
 
 /* =========================================================
-   PAGE 7 — Decision Friction
+   PAGE 7 — Decision Point
 ========================================================= */
 
 /* Background video */
@@ -913,5 +913,135 @@ right {
 
   .decision-btn {
     width: 100%;
+  }
+}
+
+/* =========================================================
+   PAGE 8 — Consent
+   ========================================================= */
+
+/* Background video like other pages */
+#page8-video-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Main container */
+#page8-container {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* Title + subtitle */
+.page8-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #00ff0d;
+}
+
+.page8-subtitle {
+  font-size: 20px;
+  color: #8cf7d7;
+  margin-bottom: 30px;
+}
+
+/* Consent popup box */
+#consent-box {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 10px;
+  padding: 24px;
+  border: 1px solid #444;
+}
+
+.consent-text {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Big ACCEPT ALL button */
+.consent-primary {
+  display: inline-block;
+  background: #00ffaa;
+  color: #111;
+  border: none;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+/* Small “review” button */
+.consent-secondary {
+  display: block;
+  margin: 6px auto 0 auto;
+  background: transparent;
+  color: #aaaaaa;
+  border: none;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Hidden detail panel (shows if user clicks review) */
+#detail-panel {
+  display: none;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #ff8888;
+}
+
+/* Message below the consent box */
+.page8-message {
+  margin-top: 28px;
+  font-size: 18px;
+  color: #ff4444;
+  min-height: 24px; /* keeps space even before message appears */
+}
+
+/* Next is hidden at first */
+.page8-next-hidden {
+  display: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 430px) {
+  #page8-container {
+    margin: 50px auto;
+    padding: 0 16px;
+  }
+
+  .page8-title {
+    font-size: 30px;
+  }
+
+  .page8-subtitle {
+    font-size: 16px;
+  }
+
+  #consent-box {
+    padding: 18px;
+  }
+
+  .consent-primary {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .consent-secondary {
+    font-size: 13px;
   }
 }

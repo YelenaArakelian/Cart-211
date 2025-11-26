@@ -3,17 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Made From You - Page 8</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Consent</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header></header>
 
-    <main></main>
+  <body class="page8">
+    <video id="page8-video-bg" autoplay loop muted playsinline>
+      <source src="videos/Page8.mp4" type="video/mp4" />
+    </video>
 
-    <footer></footer>
+    <div id="page8-container">
+      <h1 class="page8-title">Consent</h1>
+      <p class="page8-subtitle">
+        One big button. One tiny option. Both give us what we want.
+      </p>
 
-    <script src="js/script.js"></script>
+      <div id="consent-box">
+        <p class="consent-text">
+          We use your data to “improve your experience”.
+        </p>
+
+        <button id="accept-all" class="consent-primary">ACCEPT ALL</button>
+
+        <button id="review-data" class="consent-secondary">
+          Review data use
+        </button>
+      </div>
+
+      <!-- Hidden details shown if user clicks "Review data use" -->
+      <div id="detail-panel">
+        <p>
+          Data may be shared with third parties, stored indefinitely, and used
+          to build behavioral profiles across devices. Not alot of people read
+          this, do they?
+        </p>
+      </div>
+
+      <!-- Message that appears after any choice -->
+      <p id="page8-message" class="page8-message"></p>
+
+      <a
+        href="page9.html"
+        id="page8-next"
+        class="next-button page8-next-hidden"
+      >
+        Next
+      </a>
+    </div>
+
+    <script src="js/page8.js"></script>
   </body>
 </html>
